@@ -1,0 +1,116 @@
+:root {
+    --logo-font-family: Charmonman;
+    --main-font-family: inter;
+    --font-size: 16px;
+
+    --navbar-line-height: 100px;
+
+    --yellow: #C89B42;
+    --light-yellow: #FFBE3F;
+    --black: #242424;
+
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--main-font-family);
+    font-size: var(--font-size);
+}
+
+/**************  NAVBAR  ***************/
+
+nav {
+    background-color: #FFFFFF;
+    min-height: 100px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 1px 4px #afafaf;
+    z-index: 1;
+}
+
+label.logo {
+    font-size: 3em;
+    padding-left: 7%;
+    text-shadow: 2px 2px 3px #afafaf;
+    line-height: var(--navbar-line-height);
+    font-family: var(--logo-font-family);
+}
+
+nav ul {
+    float: right;
+    margin-right: 3%;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: var(--navbar-line-height);
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--light-yellow);
+    transition: 0.3s; 
+}
+
+/**************  Hero ***************/
+.hero-section {
+    padding-top: 100px;
+    color: #FFFFFF;
+    height: 100vh;
+    background-color: var(--yellow);
+}
+
+.introduce {
+    min-height: 100%;
+    width: 74%;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.8)) 
+                    , url("https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+.introduce h1, .introduce p{
+    font-weight: 300;
+    width: 35%;
+    text-align: right;
+    left: 17%;
+}
+
+.introduce h1 {
+    position: absolute;
+    font-size: 1.2em;
+    top: 300px;
+}
+
+.introduce h1 span{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 3em;
+    line-height: 70px;
+}
+
+.introduce p {
+    position: absolute;
+    top: 430px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.hero-section img {
+    width: 330px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    border-radius: 10px;
+}
