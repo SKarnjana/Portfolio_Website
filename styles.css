@@ -257,7 +257,7 @@ nav ul li a:hover {
     color: #000000;
     padding: 0.4rem;
     cursor: pointer;
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
     font-size: 0.8rem;
 }
 
@@ -267,29 +267,29 @@ nav ul li a:hover {
 }
 
 /************** Socail ***************/
-.socail {
+.social {
     margin: 60px 0;
 }
 
-.socail h2 {
+.social h2 {
     margin: 50px 10% 30px
 }
 
-.socail p {
+.social p {
     margin: 20px 10%;
     line-height: 2em;
 }    
 
-.socail .social-icon {
+.social .social-icon {
     text-align: center;
 }
 
-.socail .social-icon i {
+.social .social-icon i {
     margin: 0.3em 0.6em;
     font-size: 2.5em;
     color: var(--black);
 }
-.socail .social-icon i:hover {
+.social .social-icon i:hover {
     transition: 0.5s;
     color: var(--light-yellow);
 }

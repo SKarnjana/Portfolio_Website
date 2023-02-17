@@ -1,0 +1,47 @@
+body {
+    background: var(--black);
+}
+
+main {
+    padding-top: 200px;
+    display: inline-block;
+}
+
+main h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+
+.contact section {
+    margin: 3rem 5rem;
+    padding: 2rem;
+    width: 20rem;
+    color: var(--light-yellow);
+    border: solid 5px #FFFFFF;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.contact section i, h2 {
+    font-size: 2rem;
+    display: inline;
+}
+
+.contact section:hover {
+    transition: 0.5s;
+    transform: scale(1.1) translateY(10px);
+}
+
+.social .social-icon i {
+    color: #FFFFFF;
+}
