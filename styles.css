@@ -4,7 +4,7 @@
     --font-size: 16px;
 
     --navbar-line-height: 100px;
-
+    --h3-font-size: 2em;
     --yellow: #C89B42;
     --light-yellow: #FFBE3F;
     --black: #242424;
@@ -21,15 +21,21 @@
     font-size: var(--font-size);
 }
 
+h2 {
+    font-size: var(--h3-font-size);
+    margin: 0 10%;
+    letter-spacing: 2px;
+}
+
 /**************  NAVBAR  ***************/
 
 nav {
     background-color: #FFFFFF;
     min-height: 100px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     box-shadow: 0px 1px 4px #afafaf;
-    z-index: 1;
+    z-index: 3;
 }
 
 label.logo {
@@ -54,6 +60,7 @@ nav ul li {
 nav ul li a {
     color: var(--black);
     text-transform: uppercase;
+    font-size: calc(0.6rem + 0.5vw);
 }
 
 nav ul li a:hover {
@@ -62,14 +69,16 @@ nav ul li a:hover {
 }
 
 /**************  Hero ***************/
+
 .hero-section {
     padding-top: 100px;
     color: #FFFFFF;
     height: 100vh;
+    width: 100vw;
     background-color: var(--yellow);
 }
 
-.introduce {
+.description {
     min-height: 100%;
     width: 74%;
     margin: 0;
@@ -79,38 +88,216 @@ nav ul li a:hover {
     background-size: cover;
 }
 
-.introduce h1, .introduce p{
+.description h1, .description p{
     font-weight: 300;
-    width: 35%;
+    width: 39%;
     text-align: right;
-    left: 17%;
+    left: 15%;
 }
 
-.introduce h1 {
+.description h1 {
     position: absolute;
-    font-size: 1.2em;
     top: 300px;
+    font-size: 1.3em;
 }
 
-.introduce h1 span{
+.description h1 span{
     text-transform: uppercase;
+    letter-spacing: 5px;
     font-style: italic;
     font-weight: 500;
     font-size: 3em;
     line-height: 70px;
 }
 
-.introduce p {
+.description p {
     position: absolute;
     top: 430px;
-    font-size: 0.9em;
     line-height: 1.5em;
 }
 
 .hero-section img {
-    width: 330px;
+    width: calc(30% - 5vw);
     position: absolute;
     top: 30%;
     right: 15%;
     border-radius: 10px;
+}
+
+/************** Skills ***************/
+
+.skills-section {
+    margin: 60px 0;
+}
+
+.skills-section .skills-icon {
+    margin: 2em 5em;
+    text-align: center;
+}
+
+.skills-section i {
+    margin: 0.3em 0.6em;
+    font-size: 3em;
+}
+
+.skills-section i:hover{
+    transition: 0.7s;
+    transform: scale(1.4);
+}
+
+/************** Projects ***************/
+
+.projects-section {
+    color: #FFFFFF;
+    background-color: var(--black);
+    height: 100%;
+    width: 100%;
+    padding: 5em 0;
+}
+
+.projects-section h2 {
+    display: inline-block;
+    margin-bottom: 1em;
+    background-image: linear-gradient(90deg,#0d8ab8, #3bf974, #ffe033, #cb346e);
+    animation: gradient 10s infinite;
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* ------------ cards ------------ */
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--black);
+}
+
+.card {
+    margin: 2em;
+    width: 300px;
+    height: 380px;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.8);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgb(255, 190, 63,1));
+    z-index: 1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info {
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.card .info h3 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.card .info p {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.card:hover .info .btn{
+    background: #FFFFFF;
+    color: #000000;
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    font-size: 0.8rem;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transition: 0.8s all;
+}
+
+/************** Socail ***************/
+.socail {
+    margin: 60px 0;
+}
+
+.socail h2 {
+    margin: 50px 10% 30px
+}
+
+.socail p {
+    margin: 20px 10%;
+    line-height: 2em;
+}    
+
+.socail .social-icon {
+    text-align: center;
+}
+
+.socail .social-icon i {
+    margin: 0.3em 0.6em;
+    font-size: 2.5em;
+    color: var(--black);
+}
+.socail .social-icon i:hover {
+    transition: 0.5s;
+    color: var(--light-yellow);
+}
+
+/************** Footer ***************/
+footer{
+    padding: 2em 0;
+    background-color: var(--black);
+    color: #FFFFFF;
+    text-align: center;
 }
