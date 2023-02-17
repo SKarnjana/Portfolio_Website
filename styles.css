@@ -68,6 +68,15 @@ nav ul li a:hover {
     transition: 0.3s; 
 }
 
+@media screen and (max-width: 390px) {
+    label.logo {
+        font-size: 2em;
+    }
+    nav ul li a {
+        font-size: calc(0.5rem + 0.5vw);
+    }
+}
+
 /**************  Hero ***************/
 
 .hero-section {
@@ -123,6 +132,72 @@ nav ul li a:hover {
     right: 15%;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 950px) {
+    .hero-section {
+        height: 40rem;
+    }
+    .description {
+        min-height: 100%;
+        width: 80%;
+    }
+    .description h1 span{
+        transition: 0.5s;
+        font-size: 2.1em;
+    }
+    .description h1 {
+        transition: 0.5s;
+        top: 250px;
+        font-size: 1.3em;
+    }
+    .description h1, .description p{
+        width: 45%;
+        left: 10%;
+    }
+    .description p {
+        transition: 0.5s;
+        top: 360px;
+        font-size: calc(0.9 * 1em);
+    }
+    .hero-section img {
+        width: calc(30% - 2vw);
+        right: 10%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .hero-section {
+        height: 50rem;
+    }
+    .description {
+        width: 100%;
+    }
+    .description h1 span{
+        transition: 0.5s;
+        font-size: 1.9em;
+    }
+    .description h1 {
+        transition: 0.5s;
+        top: 250px;
+        font-size: 1em;
+    }
+    .description h1, .description p{
+        top: 500px;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+    }
+    .description p {
+        transition: 0.5s;
+        top: 600px;
+        font-size: 0.9em;
+    }
+    .hero-section img {
+        width: calc(40% - 2vw);
+        top: 180px;
+        left: 30%
+    }
+  }
 
 /************** Skills ***************/
 
